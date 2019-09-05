@@ -85,6 +85,7 @@ const airport_input = function(id, data, options) {
       ac.setAttribute('data-lon', results[index].lon);
       ac.setAttribute('data-lat', results[index].lat);
       ac.setAttribute('data-iata', results[index].IATA);
+      ac.setAttribute('data-country', results[index].country);
       clearResults();
     }
   }
@@ -150,10 +151,10 @@ const airport_input = function(id, data, options) {
         list.setAttribute('data-highlight', selectedIndex);
         break;
       case 13: // enter
-        selectIndex(selectedIndex);
+        selectIndexFunc(selectedIndex);
         break;
       case 9: // enter
-        selectIndex(selectedIndex);
+        selectIndexFunc(selectedIndex);
         e.stopPropagation();
         return;
       case 40: // down
