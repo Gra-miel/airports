@@ -155,9 +155,7 @@ const airport_input = function(id, data, options) {
         break;
       case 9: // enter
         selectIndexFunc(selectedIndex);
-        e.stopPropagation();
-        document.getElementById(id).dispatchEvent(new Event ('change'));
-        return;
+        break;
       case 40: // down
         selectedIndex++;
         if (selectedIndex >= numResults) {
