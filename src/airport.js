@@ -152,11 +152,11 @@ const airport_input = function(id, data, options) {
         break;
       case 13: // enter
         selectIndexFunc(selectedIndex);
+        document.getElementById(id).dispatchEvent(new Event('change'));
         break;
-      case 9: // enter
+      case 9: // tab
         selectIndexFunc(selectedIndex);
         e.stopPropagation();
-        document.getElementById(id).dispatchEvent(new Event ('change'));
         return;
       case 40: // down
         selectedIndex++;
